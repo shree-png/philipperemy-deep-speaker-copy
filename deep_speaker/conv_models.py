@@ -198,7 +198,7 @@ class DeepSpeakerModel:
             activation=None,
             padding='same',
             kernel_initializer='glorot_uniform',
-            kernel_regularizer=regularizers.l2(l=0.0001),
+            kernel_regularizer=regularizers.l2(0.0001),
             name=conv_name_base + '_2b',
         )(x)
         x = BatchNormalization(name=conv_name_base + '_2b_bn')(x)
